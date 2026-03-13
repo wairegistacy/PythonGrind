@@ -11,13 +11,14 @@ def guessing_game():
         if guess < 1 or guess > 10:
             print('Please enter a number between 1 and 10')
             continue
-        if guess > answer:
-            print ('Too high! Guess again')
-        if guess < answer:
-            print ('Too low! Guess again')
+
         if guess == answer:
-            print ('Correct!')
+            print('Correct!')
             break
+        elif guess > answer:
+            print ('Too high! Guess again')
+        else:
+            print ('Too low! Guess again')
         
         count += 1
 
